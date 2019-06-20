@@ -45,40 +45,42 @@ set(BOOST_LIBS_REQUIRED
 )
 set(BOOST_LIBS_OPTIONAL
   # Compiled libs
-  atomic
+  
+
+  # atomic
   chrono
-  container
+  # container
+  thread
   context
-  coroutine
-  date_time
+  # coroutine
+  # date_time
   exception
   fiber
-  filesystem
-  graph
-  iostreams
-  locale
-  log
-  math
-  mpi
-  graph_parallel # depends on mpi, so needs to be put after it
-  program_options
+  # filesystem
+  # graph
+  # iostreams
+  # locale
+  # log
+  # math
+  # mpi
+  # graph_parallel # depends on mpi, so needs to be put after it
+  # program_options
   #python # complex module
-  random
-  regex
-  serialization
-  system
+  # random
+  # regex
+  # serialization
+  # system
   test
-  thread
   timer
-  type_erasure
-  wave
-  CACHE STRING "Boost libs to be compiled"
+  # type_erasure
+  # wave
+  # CACHE STRING "Boost libs to be compiled"
 )
 
 foreach(lib ${BOOST_LIBS_REQUIRED})
   include("libs/${lib}.cmake")
 endforeach()
-
+message("-- BOOST_LIBS_OPTIONAL : ${BOOST_LIBS_OPTIONAL}")
 foreach(lib ${BOOST_LIBS_OPTIONAL})
   # In case only a subset of modules is available (eg. after using bcp)
   if(EXISTS "${BOOST_SOURCE}/libs/${lib}")
