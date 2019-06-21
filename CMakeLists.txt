@@ -48,14 +48,14 @@ set(BOOST_LIBS_OPTIONAL
   
 
   # atomic
-  chrono
+  # chrono
   # container
-  thread
+  # thread
   context
   # coroutine
   # date_time
-  exception
-  fiber
+  # exception
+  # fiber
   # filesystem
   # graph
   # iostreams
@@ -70,8 +70,8 @@ set(BOOST_LIBS_OPTIONAL
   # regex
   # serialization
   # system
-  test
-  timer
+  # test
+  # timer
   # type_erasure
   # wave
   # CACHE STRING "Boost libs to be compiled"
