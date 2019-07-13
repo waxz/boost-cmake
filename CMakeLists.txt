@@ -56,7 +56,7 @@ set(BOOST_LIBS_OPTIONAL
   # date_time
   # exception
   # fiber
-  # filesystem
+   filesystem
   # graph
   # iostreams
   # locale
